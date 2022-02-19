@@ -25,12 +25,13 @@ class PhoneBook {
 	public:
 		PhoneBook(void);
 		~PhoneBook(void);
-		void	add_contact(Contact contact);
+		int	add_contact();
 		int		search_contact(void);
 
 	private:
 		int		count;
 		Contact contacts[8];
+		int	create_contact(Contact *contact);
 };
 
 int	add_contact(PhoneBook *PhoneBook);

@@ -3,7 +3,7 @@
 int	main(void)
 {
 	std::string	str;
-	PhoneBook PhoneBook;
+	PhoneBook phone_book;
 
 	while (1)
 	{
@@ -12,12 +12,12 @@ int	main(void)
 			return (1);
 		if (str == "ADD")
 		{
-			if (!add_contact(&PhoneBook))
+			if (!phone_book.add_contact())
 				return (1);
 		}
 		else if (str == "SEARCH")
 		{
-			if (!PhoneBook.search_contact())
+			if (!phone_book.search_contact())
 				return (1);
 		}
 		else if (str == "EXIT")

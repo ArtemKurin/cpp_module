@@ -10,22 +10,54 @@ PhoneBook::~PhoneBook(void)
 
 }
 
-void	PhoneBook::add_contact(Contact contact)
+int	PhoneBook::create_contact(Contact *n_contact)
 {
-	if (this->count < 8)
+	std::string	str;
+	static int	num;
+
+	for (int i = 0; i < 5; i++)
 	{
-		contacts[this->count] = contact;
-		this->count++;
-	}
-	else
-	{
-		for (int i = 0; i < 7; i++)
+		std::cout << "Enter " + n_contact->get_name(i) + " : ";
+		if (!std::getline(std::cin, str))
+			return (0);
+		if (str.length() == 0)
 		{
-			contacts[i] = contacts[i + 1];
-			contacts[i].set_index(i);
+			std::cout << "Wrong " + n_contact->get_name(i) << std::endl;
+			return (2);
 		}
-		contacts[this->count - 1] = contact;
+		n_contact->set(i, str, num);
 	}
+	if (num < 8)
+		num++;
+	return (1);
+}
+
+int	PhoneBook::add_contact()
+{
+	Contact	contact;
+	int		flag;
+
+	flag = this->create_contact(&contact);
+	if (flag == 1)
+	{
+		if (this->count < 8)
+		{
+			contacts[this->count] = contact;
+			this->count++;
+		}
+		else
+		{
+			for (int i = 0; i < 7; i++)
+			{
+				contacts[i] = contacts[i + 1];
+				contacts[i].set_index(i);
+			}
+			contacts[this->count - 1] = contact;
+		}
+	}
+	if (flag == 0)
+		return (0);
+	return (1);
 }
 
 int	PhoneBook::search_contact()
@@ -35,13 +67,8 @@ int	PhoneBook::search_contact()
 	std::cout << "Enter index : ";
 	if (!std::getline(std::cin, str))
 		return (0);
-	if (str.length() > 1 || !isdigit(str[0]))
-	{
-		std::cout << "Wrong index" << std::endl;
-		return (1);
-	}
 	index = str[0] - '0';
-	if (index > 7 || this->count - 1 < index)
+	if (str.length() != 1 || !isdigit(str[0]) || index > 7 || this->count - 1 < index)
 	{
 		std::cout << "Wrong index" << std::endl;
 		return (1);
