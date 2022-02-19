@@ -8,7 +8,7 @@ class Karen {
 	public:
 		Karen();
 		~Karen(void);
-		void	complain(std::string);
+		void	complain(std::string fnName);
 	private:
 		void debug(void);
 		void info(void);
