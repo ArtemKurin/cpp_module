@@ -1,4 +1,4 @@
-NAME		= zombie
+NAME		= prog
 
 SRCS		= main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 OBJS 		= $(SRCS:.cpp=.o)
