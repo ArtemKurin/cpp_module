@@ -8,7 +8,7 @@ class Fixed {
 
 		Fixed	&operator= (const Fixed &other)
 		int		getRawBits(void) const;
-		void	setRawBits(int const raw);
+		void	setRawBits(int const nNum);
 	private:
 		static const int	raw;
 		int					num;

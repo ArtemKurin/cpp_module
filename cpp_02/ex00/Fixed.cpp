@@ -1,5 +1,7 @@
 #include "Fixed.hpp"
 
+const int Fixed::raw = 8;
+
 Fixed::Fixed()
 {
 	std::cout << "Default constructor called" << std::endl;
@@ -30,7 +32,7 @@ void	Fixed::getRawBits(void)
 	return (this->num);
 }
 
-void	Fixed::setRawBits(int const raw)
+void	Fixed::setRawBits(int const nNum)
 {
-	this->num = num;
+	this->num = nNum;
 }
