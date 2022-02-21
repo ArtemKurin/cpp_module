@@ -10,27 +10,33 @@ Karen::~Karen(void)
 
 }
 
-void	Karen::complain(std::string fnName, std::string lvl)
+void	Karen::complain(std::string lvl)
 {
-	void	(Karen::*functions[])(void) = {
-		&Karen::debug,
-		&Karen::info,
-		&Karen::warning,
-		&Karen::error
-	};
+	int			i = 0;
 	std::string names[4] = {
 		"DEBUG",
 		"INFO",
 		"WARNING",
 		"ERROR"
 	};
-	int			i = 0;
 	while (i < 4 && lvl != names[i])
 		i++;
-	while (i < 4 && fnName != names[i])
-		i++;
-	if (i != 4)
-		(this->*functions[i])();
+	switch (i)
+	{
+		case 0:
+			this->debug();
+		case 1:
+			this->info();
+		case 2:
+			this->warning();
+		case 3:
+			this->error();
+				break ;
+		default:
+			std::cout << "Bad command"<< std::endl;
+				break;
+
+	}
 }
 
 void	Karen::debug(void)
