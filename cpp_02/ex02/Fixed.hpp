@@ -29,10 +29,10 @@ class Fixed {
 		Fixed	operator++(int);
 		Fixed	&operator--(void);
 		Fixed	operator--(int);
-		static Fixed	&Fixed::min(Fixed &a, Fixed &b);
-		static Fixed	&Fixed::max(Fixed &a, Fixed &b);
-		static const Fixed	&Fixed::min(Fixed const &a, Fixed const &b);
-		static const Fixed	&Fixed::max(Fixed const &a, Fixed const &b);
+		static Fixed	&min(Fixed &a, Fixed &b);
+		static Fixed	&max(Fixed &a, Fixed &b);
+		static const Fixed	&min(Fixed const &a, Fixed const &b);
+		static const Fixed	&max(Fixed const &a, Fixed const &b);
 	private:
 		static const int	raw;
 		int					num;

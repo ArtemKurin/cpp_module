@@ -133,10 +133,10 @@ Fixed	&Fixed::operator-- (void)
 
 Fixed	Fixed::operator-- (int)
 {
-	Fixed tmp(tmp);
+	Fixed tmp(*this);
 
 	(this->num)--;
-	return (*this);
+	return (tmp);
 }
 
 Fixed	&Fixed::min(Fixed &a, Fixed &b)
