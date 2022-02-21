@@ -9,7 +9,7 @@ class Fixed {
 		Fixed(const Fixed &other);
 		~Fixed();
 
-		Fixed			&operator= (const Fixed &other)
+		Fixed			&operator= (const Fixed &other);
 		int				getRawBits(void) const;
 		void			setRawBits(int const nNum);
 		float			toFloat(void) const;
@@ -29,13 +29,13 @@ class Fixed {
 		Fixed	operator++(int);
 		Fixed	&operator--(void);
 		Fixed	operator--(int);
+		static Fixed	&Fixed::min(Fixed &a, Fixed &b);
+		static Fixed	&Fixed::max(Fixed &a, Fixed &b);
+		static const Fixed	&Fixed::min(Fixed const &a, Fixed const &b);
+		static const Fixed	&Fixed::max(Fixed const &a, Fixed const &b);
 	private:
 		static const int	raw;
 		int					num;
 };
 
 std::ostream	&operator<< (std::ostream &out, const Fixed &value);
-Fixed& Fixed::min(Fixed &a, Fixed &b);
-Fixed& Fixed::max(Fixed &a, Fixed &b);
-const Fixed &Fixed::min(Fixed const &a, Fixed const &b);
-const Fixed &Fixed::max(Fixed const &a, Fixed const &b);

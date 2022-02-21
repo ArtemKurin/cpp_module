@@ -28,14 +28,14 @@ Fixed::~Fixed(void)
 	std::cout << "Destructor called" << std::endl;
 }
 
-Fixed	&operator= (const Fixed &other)
+Fixed	&Fixed::operator= (const Fixed &other)
 {
 	std::cout << "Assignation operator called" << std::endl;
-	this->num = other->other.getRawBits();
+	this->num = other.getRawBits();
 	return (*this);
 }
 
-void	Fixed::getRawBits(void)
+int		Fixed::getRawBits(void) const
 {
 	std::cout << "getRawBits member function called" << std::endl;
 	return (this->num);
@@ -139,7 +139,7 @@ Fixed	Fixed::operator-- (int)
 	return (*this);
 }
 
-Fixed& Fixed::min(Fixed &a, Fixed &b)
+Fixed	&Fixed::min(Fixed &a, Fixed &b)
 {
 	if (a.getRawBits() < b.getRawBits())
 		return (a);
@@ -147,7 +147,7 @@ Fixed& Fixed::min(Fixed &a, Fixed &b)
 		return (b);
 }
 
-Fixed& Fixed::max(Fixed &a, Fixed &b)
+Fixed	&Fixed::max(Fixed &a, Fixed &b)
 {
 	if (a.getRawBits() > b.getRawBits())
 		return (a);
