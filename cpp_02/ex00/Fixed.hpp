@@ -1,3 +1,5 @@
+#ifndef FIXED_HPP
+# define FIXED_HPP
 #include <iostream>
 
 class Fixed {
@@ -13,3 +15,5 @@ class Fixed {
 		static const int	raw;
 		int					num;
 };
+
+#endif

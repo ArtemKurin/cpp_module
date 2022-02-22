@@ -1,5 +1,7 @@
-#include <iostream>
-#include <cmath>
+#ifndef FIXED_HPP
+# define FIXED_HPP
+# include <iostream>
+# include <cmath>
 
 class Fixed {
 	public:
@@ -39,3 +41,4 @@ class Fixed {
 };
 
 std::ostream	&operator<< (std::ostream &out, const Fixed &value);
+#endif
