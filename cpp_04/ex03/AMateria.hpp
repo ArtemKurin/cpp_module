@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+class AMateria;
 #include "ICharacter.hpp"
 
 class AMateria
