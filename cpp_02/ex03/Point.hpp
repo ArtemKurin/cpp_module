@@ -7,7 +7,7 @@ class Point
 	public:
 		Point(void);
 		Point(const Point &other);
-		Point(const Fixed &fixedX, const Fixed &fixedY);
+		Point(float const x, float const y);
 		~Point();
 
 		float	getX(void) const;

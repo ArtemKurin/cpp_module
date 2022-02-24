@@ -5,12 +5,12 @@ Point::Point(void) : x(0), y(0)
 
 }
 
-Point::Point(const Fixed &fixedX, const Fixed &fixedY) : x(fixedX), y(fixedY)
+Point::Point(float const x, float const y) : x(x), y(y)
 {
 	
 }
 
-Point::Point(const Point &other) : x(other.getX()), y(other.getY())
+Point::Point(const Point &other) : x(other.x), y(other.y)
 {
 
 }
