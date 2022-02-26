@@ -18,13 +18,14 @@ class Bureaucrat
 	public:
 		Bureaucrat(std::string name, int grade);
 		Bureaucrat(Bureaucrat const &other);
-		~Bureaucrat();
+		virtual ~Bureaucrat();
 
 		std::string	getName() const;
 		int			getGrade() const;
 		void		upGrade(void);
 		void		downGrade(void);
 		void		signForm(Form &form);
+		void		executeForm(Form const & form);
 
 		Bureaucrat	&operator= (Bureaucrat const &other);
 

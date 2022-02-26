@@ -31,7 +31,7 @@ class ShrubberyCreationForm : public Form
 		{
 			virtual const char *what() const throw()
 			{
-				return "ShrubberyCreationFormException: Cannot open file";
+				return "ShrubberyCreationFormException::FileOpenException: Cannot open file";
 			}
 		};
 
@@ -39,7 +39,7 @@ class ShrubberyCreationForm : public Form
 		{
 			virtual const char *what() const throw()
 			{
-				return "UnsignedFormException: form is unsigned";
+				return "ShrubberyCreationFormException::UnsignedFormException: form is unsigned";
 			}
 		};
 

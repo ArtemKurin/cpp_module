@@ -6,7 +6,7 @@ class Fixed {
 	public:
 		Fixed();
 		Fixed(const Fixed &other);
-		~Fixed();
+		virtual ~Fixed();
 
 		Fixed	&operator= (const Fixed &other);
 		int		getRawBits(void) const;

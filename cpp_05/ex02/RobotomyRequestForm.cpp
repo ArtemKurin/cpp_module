@@ -1,6 +1,6 @@
 #include "RobotomyRequestForm.hpp"
 
-std::string RobotomyRequestForm::name = "Shrubbery Creation";
+std::string RobotomyRequestForm::name = "RobotomyRequestForm";
 
 RobotomyRequestForm::RobotomyRequestForm() :
 	Form(name, 72, 45), target("does not exist")
@@ -26,7 +26,7 @@ RobotomyRequestForm &RobotomyRequestForm::operator=(RobotomyRequestForm const &o
 	this->target = other.target;
 	return (*this);
 }
-
+#include <unistd.h>
 void	RobotomyRequestForm::execute(Bureaucrat const &executor) const
 {
 	if (executor.getGrade() > this->getGradeToExecute())

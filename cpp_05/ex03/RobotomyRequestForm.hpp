@@ -18,7 +18,7 @@ class RobotomyRequestForm : public Form
 		{
 			virtual const char *what() const throw()
 			{
-				return "UnsignedFormException: form is unsigned";
+				return "RobotomyRequestForm::UnsignedFormException: form is unsigned";
 			}
 		};
 

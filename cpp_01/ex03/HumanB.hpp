@@ -10,7 +10,7 @@ class HumanB {
 		public:
 		HumanB();
 		HumanB(std::string const &name);
-		~HumanB(void);
+		virtual ~HumanB(void);
 		void	attack() const;
 		void	setWeapon(const Weapon &weapon);
 	private:

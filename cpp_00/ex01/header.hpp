@@ -8,7 +8,7 @@
 class Contact {
 	public:
 		Contact();
-		~Contact();
+		virtual ~Contact();
 
 		std::string get(int index);
 		std::string	get_name(int index);
@@ -24,7 +24,7 @@ class Contact {
 class PhoneBook {
 	public:
 		PhoneBook(void);
-		~PhoneBook(void);
+		virtual ~PhoneBook(void);
 		int	add_contact();
 		int		search_contact(void);
 

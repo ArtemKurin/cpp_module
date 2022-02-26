@@ -1,6 +1,6 @@
 #include "PresidentialPardonForm.hpp"
 
-std::string PresidentialPardonForm::name = "Shrubbery Creation";
+std::string PresidentialPardonForm::name = "PresidentialPardonForm";
 
 PresidentialPardonForm::PresidentialPardonForm() :
 	Form(name, 25, 5), target("does not exist")

@@ -64,26 +64,16 @@ void		Bureaucrat::signForm(Form &form)
 		#include <unistd.h>
 void Bureaucrat::executeForm(Form const & form)
 {
-	if (!form.getStatus())
-	{
-		std::cout << this->getName() << " cannot execute "
-				<< " because the form is unsigned." << std::endl;
-	}
-	else if (form.getGradeToExecute() < this->grade)
-	{
-		GradeTooLowException() ;
-	}
-
+	if (form.getGradeToExecute() < this->grade)
+		GradeTooLowException();
 	try
 	{
-	// 	// write(1, "ququ\n", 5);
 		form.execute(*this);
 	}
 	catch (const std::exception& e)
 	{
 		std::cout << this->name << " could not execute " << form.getName() << ", because " << e.what() << std::endl;
 	}
-	// form.execute(*this);
 }
 
 Bureaucrat	&Bureaucrat::operator= (Bureaucrat const &other)

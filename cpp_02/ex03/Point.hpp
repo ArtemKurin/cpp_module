@@ -8,7 +8,7 @@ class Point
 		Point(void);
 		Point(const Point &other);
 		Point(float const x, float const y);
-		~Point();
+		virtual ~Point();
 
 		float	getX(void) const;
 		float	getY(void) const;

@@ -1,14 +1,14 @@
 #include "ShrubberyCreationForm.hpp"
 
-std::string ShrubberyCreationForm::name = "Shrubbery Creation";
+std::string ShrubberyCreationForm::name = "ShrubberyCreationForm";
 
 ShrubberyCreationForm::ShrubberyCreationForm() :
-	Form("ShrubberyCreationForm", 145, 137), target("does not exist")
+	Form(name, 145, 137), target("does not exist")
 {
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(std::string const &target) :
-	Form("ShrubberyCreationForm", 145, 137), target(target)
+	Form(name, 145, 137), target(target)
 {
 }
 

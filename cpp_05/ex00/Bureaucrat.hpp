@@ -16,7 +16,7 @@ class Bureaucrat
 	public:
 		Bureaucrat(std::string name, int grade);
 		Bureaucrat(Bureaucrat const &other);
-		~Bureaucrat();
+		virtual ~Bureaucrat();
 
 		std::string	getName() const;
 		int			getGrade() const;

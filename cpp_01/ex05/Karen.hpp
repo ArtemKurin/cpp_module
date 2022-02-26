@@ -7,7 +7,7 @@
 class Karen {
 	public:
 		Karen();
-		~Karen(void);
+		virtual ~Karen(void);
 		void	complain(std::string fnName);
 	private:
 		void debug(void);

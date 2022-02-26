@@ -18,7 +18,7 @@ class PresidentialPardonForm : public Form
 		{
 			virtual const char *what() const throw()
 			{
-				return "UnsignedFormException: form is unsigned";
+				return "PresidentialPardonForm::UnsignedFormException: form is unsigned";
 			}
 		};
 

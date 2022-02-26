@@ -30,7 +30,7 @@ public:
 	static void	displayAccountsInfos( void );
 
 	Account( int initial_deposit );
-	~Account( void );
+	virtual ~Account( void );
 
 	void	makeDeposit( int deposit );
 	bool	makeWithdrawal( int withdrawal );

@@ -9,7 +9,7 @@ class Fixed {
 		Fixed(int const val);
 		Fixed(float const val);
 		Fixed(const Fixed &other);
-		~Fixed();
+		virtual ~Fixed();
 
 		Fixed			&operator= (const Fixed &other);
 		int				getRawBits(void) const;
