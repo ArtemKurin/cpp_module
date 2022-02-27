@@ -11,13 +11,11 @@ class Animal
 		virtual ~Animal();
 
 		virtual void	makeSound() const;
-		virtual Brain	*getBrain() const;
 		std::string		getType() const;
 		Animal 		&operator= (const Animal &other);
 
 	protected:
 		std::string		type;
-		Brain	*brain;
 };
 
 #endif

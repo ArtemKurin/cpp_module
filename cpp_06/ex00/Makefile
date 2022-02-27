@@ -1,6 +1,6 @@
-NAME		= Animal
+NAME		= convert
 
-SRCS		= main.cpp Cat.cpp Dog.cpp Animal.cpp WrongCat.cpp WrongAnimal.cpp
+SRCS		= main.cpp Convert.cpp
 OBJS 		= $(SRCS:.cpp=.o)
 
 CC			= c++
@@ -10,7 +10,7 @@ RM = rm -rf
 
 all: $(NAME)
 
-%.o : %.cpp Cat.hpp Dog.hpp Animal.hpp WrongCat.hpp WrongAnimal.hpp Makefile
+%.o : %.cpp Convert.hpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)

@@ -10,7 +10,10 @@ RM = rm -rf
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(SRCS)
+%.o : %.cpp Cat.hpp Dog.hpp Animal.hpp WrongCat.hpp WrongAnimal.hpp Brain.hpp Makefile
+	$(CC) $(CFLAGS) -c $< -o $@
+
+$(NAME): $(OBJS)
 	$(CC) $(OBJS) $(CFLAGS) -o $(NAME)
 
 clean:

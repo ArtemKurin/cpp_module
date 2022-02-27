@@ -1,6 +1,6 @@
-NAME		= Animal
+NAME		= cpp07ex01
 
-SRCS		= main.cpp Cat.cpp Dog.cpp Animal.cpp WrongCat.cpp WrongAnimal.cpp
+SRCS		= main.cpp
 OBJS 		= $(SRCS:.cpp=.o)
 
 CC			= c++
@@ -10,7 +10,7 @@ RM = rm -rf
 
 all: $(NAME)
 
-%.o : %.cpp Cat.hpp Dog.hpp Animal.hpp WrongCat.hpp WrongAnimal.hpp Makefile
+%.o : %.cpp whatever.hpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)

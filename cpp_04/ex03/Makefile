@@ -10,7 +10,10 @@ RM = rm -rf
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(SRCS)
+%.o : %.cpp AMateria.hpp MateriaSource.hpp IMateriaSource.hpp ICharacter.hpp Character.hpp Ice.hpp Cure.hpp Makefile
+	$(CC) $(CFLAGS) -c $< -o $@
+
+$(NAME): $(OBJS)
 	$(CC) $(OBJS) $(CFLAGS) -o $(NAME)
 
 clean:

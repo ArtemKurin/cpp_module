@@ -23,7 +23,7 @@ std::string		Animal::getType() const
 
 void	Animal::makeSound() const
 {
-	std::cout << "Make sound : *sount Animal*" << std::endl;
+	std::cout << "Make sound : *sound Animal*" << std::endl;
 }
 
 Animal 		&Animal::operator= (const Animal &other)

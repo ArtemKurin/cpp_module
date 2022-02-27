@@ -8,6 +8,7 @@ int main()
 {
 	const Animal *meta[100];
 	
+	
 	for (int i = 0; i < 6; i++)
 	{
 		if (i < 3)
@@ -20,13 +21,40 @@ int main()
 	/*-----Test ideas-----*/
 	/*--------------------*/
 
-	Brain *br = meta[3]->getBrain();
-	for (int i = 0; i < 100; i++)
-		br->printIdeas(i);
-	
+	std::cout << "\n----------Test ideas :----------\n" << std::endl;
+	{
+		Cat cat;
+		Brain *br = cat.getBrain();
+		for (int i = 0; i < 100; i++)
+			br->printIdeas(i);
+	}
+
+	std::cout << "\n----------Test operator = :----------\n" << std::endl;
+
+	{
+		Dog basic;
+		Dog tmp;
+		tmp = basic;
+		tmp.getBrain()->printIdeas(2);
+		basic.getBrain()->printIdeas(2);
+	}
+
+	std::cout << "\n----------Test constructor copy :----------\n" << std::endl;
+
+	{
+		Cat ba;
+		Cat clon(ba);
+		ba.getBrain()->printIdeas(2);
+		clon.getBrain()->printIdeas(2);
+		ba.getBrain()->printIdeas(2);
+		clon.getBrain()->printIdeas(2);
+	}
+
 	/*------------------------------*/
 	/*---Test Sound---Delete objs---*/
 	/*------------------------------*/
+
+	std::cout << "\n----------Test Sound---Delete objs :----------\n" << std::endl;
 
 	for (int i = 0; i < 6; i++)
 	{
@@ -34,5 +62,7 @@ int main()
 		meta[i]->makeSound();
 		delete meta[i];
 	}
+	// Animal a;
+
 	return 0;
 }
